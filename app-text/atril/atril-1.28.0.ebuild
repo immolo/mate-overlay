@@ -71,11 +71,6 @@ BDEPEND="${COMMON_DEPEND}
 # Until we figure out how to run successfully, don't run tests
 RESTRICT="test"
 
-PATCHES=(
-	# https://github.com/mate-desktop/atril/issues/582
-	"${FILESDIR}/${PN}-1.26.1-webkitgtk4.1.patch"
-)
-
 python_check_deps() {
 	use test && python_has_version "dev-util/dogtail[${PYTHON_USEDEP}]"
 }
