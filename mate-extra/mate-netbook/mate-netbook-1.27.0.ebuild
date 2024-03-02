@@ -5,16 +5,12 @@ EAPI=8
 
 inherit mate
 
-MINOR=$(($(ver_cut 2) % 2))
-if [[ ${MINOR} -eq 0 ]]; then
-	KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
-fi
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
+IUSE=""
 
 DESCRIPTION="MATE utilities for netbooks"
 LICENSE="GPL-3"
 SLOT="0"
-
-IUSE=""
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.50:2
@@ -37,3 +33,4 @@ BDEPEND="${COMMON_DEPEND}
 	sys-devel/gettext:*
 	virtual/pkgconfig:*
 "
+
