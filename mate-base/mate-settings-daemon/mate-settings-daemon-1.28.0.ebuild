@@ -62,10 +62,6 @@ DEPEND="${COMMON_DEPEND}
 	x11-base/xorg-proto
 "
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.26.0-fix-buid-with-clang16.patch
-)
-
 src_configure() {
 	mate_src_configure \
 		$(use_with X x) \
