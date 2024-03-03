@@ -64,7 +64,9 @@ BDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	# https://github.com/mate-desktop/mate-control-center/issues/701
-	"${FILESDIR}"/${PN}-1.26.0-ayatana-detection.patch
+	# temoprarily disable ayatana appindicator support until it's fixed
+	# for 1.28.0 release
+	#"${FILESDIR}"/${PN}-1.26.0-ayatana-detection.patch
 )
 
 src_configure() {
