@@ -16,7 +16,7 @@ DESCRIPTION="The MATE Desktop configuration tool"
 LICENSE="FDL-1.1+ GPL-2+ LGPL-2+ LGPL-2.1+ HPND"
 SLOT="0"
 
-IUSE="accountsservice appindicator debug nls"
+IUSE="accountsservice appindicator debug nls systemd"
 
 COMMON_DEPEND="
 	>=app-accessibility/at-spi2-core-2.46.0:2
@@ -48,6 +48,7 @@ COMMON_DEPEND="
 	>=x11-wm/marco-1.17.0:=
 	accountsservice? ( sys-apps/accountsservice )
 	appindicator? ( dev-libs/libayatana-appindicator )
+	systemd? ( sys-apps/systemd )
 "
 
 RDEPEND="${COMMON_DEPEND}"
@@ -64,7 +65,10 @@ BDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	# https://github.com/mate-desktop/mate-control-center/issues/701
-	"${FILESDIR}"/${PN}-1.26.0-ayatana-detection.patch
+	# temoprarily disable ayatana appindicator support until it's fixed
+	# for 1.28.0 release
+	#"${FILESDIR}"/${PN}-1.26.0-ayatana-detection.patch
+	"${FILESDIR}/${PN}"-1.28.0-optional-systemd.patch
 )
 
 src_configure() {
