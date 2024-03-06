@@ -76,5 +76,6 @@ src_configure() {
 		--disable-update-mimedb \
 		$(use_enable appindicator) \
 		$(use_enable nls) \
+		$(use_enable systemd) \
 		$(use_enable debug)
 }
