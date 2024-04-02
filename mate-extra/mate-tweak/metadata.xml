@@ -6,7 +6,7 @@
 			<name>Ian Jordan</name>
 		</maintainer>
 		<maintainer type="person" proxied="yes">
-		    <email>tacokoneko@gmail.com</email>
+			<email>tacokoneko@gmail.com</email>
 		</maintainer>
 		<maintainer type="project" proxied="proxy">
 			<email>proxy-maint@gentoo.org</email>
