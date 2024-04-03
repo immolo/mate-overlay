@@ -60,7 +60,7 @@ src_prepare() {
 src_install() {
 	distutils-r1_src_install
 	rsync -av "${ED}"/usr/lib/python*/site-packages/usr/ "${ED}"/usr || die
-	rm -r "${ED}"/usr/lib/python*/site-packages/usr/ || die
+	rm -r "${ED}"/usr/lib/python*/site-packages/{usr,__pycache__,setup.py}
 	python_fix_shebang "${ED}"
 }
 
