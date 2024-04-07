@@ -19,9 +19,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="dropdown netbook"
 
 RDEPEND="
-	dev-python/distro
-	dev-python/psutil
-	dev-python/setproctitle
+	$(python_gen_cond_dep '
+		dev-python/distro[${PYTHON_USEDEP}]
+		dev-python/psutil[${PYTHON_USEDEP}]
+		dev-python/setproctitle[${PYTHON_USEDEP}]
+	')
 	gnome-base/dconf
 	x11-libs/libnotify
 	mate-base/libmatekbd
@@ -31,7 +33,6 @@ RDEPEND="
 "
 
 BDEPEND="
-	dev-python/setuptools
 	dev-util/intltool
 	net-misc/rsync
 	sys-devel/gettext
