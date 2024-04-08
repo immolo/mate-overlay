@@ -7,13 +7,13 @@
 	</maintainer>
 	<maintainer type="person" proxied="yes">
 		<email>tacokoneko@gmail.com</email>
+		<name>Robet Kirkman</name>
 	</maintainer>
 	<maintainer type="project" proxied="proxy">
 		<email>proxy-maint@gentoo.org</email>
 		<name>Proxy Maintainers</name>
 	</maintainer>
 	<use>
-		<flag name="netbook">Support the MATE utilities for netbooks, <pkg>mate-extra/mate-netbook</pkg></flag>
 		<flag name="dropdown">Support the <pkg>x11-terms/tilda</pkg> dropdown terminal emulator</flag>
 	</use>
 	<upstream>
