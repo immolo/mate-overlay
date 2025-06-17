@@ -1,0 +1,13 @@
+BDEPEND=>=app-accessibility/at-spi2-core-2.46.0 >=dev-libs/glib-2.50:2 >=gnome-base/dconf-0.13.4 x11-libs/gdk-pixbuf:2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/pango >=x11-libs/gtk+-3.22:3[X] >=x11-libs/vte-0.48:2.91 app-text/rarian app-text/yelp-tools dev-util/glib-utils sys-devel/gettext virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=The MATE Terminal
+EAPI=8
+HOMEPAGE=https://github.com/mate-desktop/mate-terminal
+INHERIT=meson
+KEYWORDS=~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+LICENSE=FDL-1.1+ GPL-2 GPL-3+ LGPL-3+
+RDEPEND=>=app-accessibility/at-spi2-core-2.46.0 >=dev-libs/glib-2.50:2 >=gnome-base/dconf-0.13.4 x11-libs/gdk-pixbuf:2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/pango >=x11-libs/gtk+-3.22:3[X] >=x11-libs/vte-0.48:2.91 >=mate-base/mate-desktop-1.28 virtual/libintl
+SLOT=0
+SRC_URI=https://github.com/mate-desktop/mate-terminal/archive/refs/tags/v1.28.1.tar.gz -> mate-terminal-1.28.1.tar.gz https://github.com/mate-desktop/mate-submodules/archive/${MY_COMMIT}.tar.gz -> mate-submodules-4074560e3642a53ace07b31baaf3f04c060dcd0b.tar.gz
+_eclasses_=toolchain-funcs	f9d71a6efe9d083aec750dd13968e169	flag-o-matic	b892042b2667b8ac69ec8a2571dc290a	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	b043191f3a82642545249acea7318e03	meson	99466844dd8d4fcfb07578a76f5a9922
+_md5_=0d7f0da174f36fa9653ce187a46c8855
