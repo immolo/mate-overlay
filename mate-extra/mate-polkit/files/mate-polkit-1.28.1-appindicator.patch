@@ -1,0 +1,18 @@
+From: Ian Jordan <immoloism@gmail.com>
+
+Fixes appindicator from being forced on even when disabled with build option.
+
+--- a/meson.build
++++ b/meson.build
+@@ -72,9 +72,9 @@
+ if build_accountsservice
+   config_data.set('HAVE_ACCOUNTSSERVICE', 1)
+ endif
+-if appindicator_ayatana and get_option('appindicator') != 'no'
++if appindicator_ayatana and get_option('appindicator') != 'false'
+   config_data.set('HAVE_AYATANA_APPINDICATOR', 1)
+-elif ubuntu_ayatana and get_option('appindicator') != 'no'
++elif ubuntu_ayatana and get_option('appindicator') != 'false'
+   config_data.set('HAVE_UBUNTU_APPINDICATOR', 1)
+ endif
+ config_file = configure_file(output : 'config.h', configuration : config_data)
