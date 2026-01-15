@@ -11,7 +11,7 @@ MY_COMMIT="4074560e3642a53ace07b31baaf3f04c060dcd0b"
 # MATE uses an odd/even numbering system for release and dev builds
 MINOR=$(($(ver_cut 2) % 2))
 if [[ ${MINOR} -eq 0 ]]; then
-#	KEYWORDS="amd64 ~arm ~arm64 ~loong ~riscv x86"
+	KEYWORDS="amd64 ~arm ~arm64 ~loong ~riscv x86"
 fi
 
 DESCRIPTION="Libraries for the MATE desktop that are not part of the UI"
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/mate-desktop/mate-desktop"
 
 SRC_URI="
 	https://github.com/mate-desktop/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-	https://github.com/mate-desktop/mate-submodules/archive/$"{MY_COMMIT}".tar.gz -> mate-submodules-${MY_COMMIT}.tar.gz
+	https://github.com/mate-desktop/mate-submodules/archive/${MY_COMMIT}.tar.gz -> mate-submodules-${MY_COMMIT}.tar.gz
 "
 
 S="${WORKDIR}/${PN}-${PV}"
